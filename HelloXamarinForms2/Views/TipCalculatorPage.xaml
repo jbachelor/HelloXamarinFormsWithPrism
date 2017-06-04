@@ -1,16 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage
 	xmlns="http://xamarin.com/schemas/2014/forms"
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 	xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
 	prism:ViewModelLocator.AutowireViewModel="True"
-	x:Class="HelloXamarinForms2.Views.MainPage"
-	Title="MainPage">
-	<StackLayout
+	x:Class="HelloXamarinForms2.Views.TipCalculatorPage">
+	<Label Text="Tip Calculator page"
 		HorizontalOptions="Center"
-		VerticalOptions="Center">
-		<Button
-			Text="Tip Calculator"
-			Command="{Binding NavToTipCalculatorCommand}"/>
-	</StackLayout>
+		VerticalOptions="Center" />
 </ContentPage>

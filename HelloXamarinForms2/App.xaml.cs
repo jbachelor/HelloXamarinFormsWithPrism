@@ -17,6 +17,7 @@ namespace HelloXamarinForms2
 		protected override void RegisterTypes()
 		{
 			Container.RegisterTypeForNavigation<MainPage>();
+			Container.RegisterTypeForNavigation<TipCalculatorPage>();
 		}
 	}
 }
