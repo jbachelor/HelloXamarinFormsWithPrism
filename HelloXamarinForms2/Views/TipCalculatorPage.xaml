@@ -5,7 +5,27 @@
 	xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
 	prism:ViewModelLocator.AutowireViewModel="True"
 	x:Class="HelloXamarinForms2.Views.TipCalculatorPage">
-	<Label Text="Tip Calculator page"
-		HorizontalOptions="Center"
-		VerticalOptions="Center" />
+	<StackLayout
+		HorizontalOptions="CenterAndExpand"
+		VerticalOptions="CenterAndExpand">
+		<Label
+			Text="Tip Calculator page"
+			HorizontalOptions="Center"
+			VerticalOptions="Center" />
+		<Entry
+			Placeholder="Enter billed amount"
+			Keyboard="Numeric"
+			Text="{Binding BillAmount, StringFormat='{0:C}'}" />
+		<StackLayout
+			Orientation="Horizontal">
+			<Slider
+				x:Name="TipPercentSlider"
+				Minimum="0"
+				Maximum="0.50"
+				Value="{Binding TipPercentage}"
+				HorizontalOptions="Start" />
+			<Label
+				Text="{Binding Source={x:Reference TipPercentSlider}, Path=Value, StringFormat='{0:P0}'}" />
+		</StackLayout>
+	</StackLayout>
 </ContentPage>
