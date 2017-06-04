@@ -1,5 +1,6 @@
 ﻿using Prism.Unity;
 using HelloXamarinForms2.Views;
+using Xamarin.Forms;
 
 namespace HelloXamarinForms2
 {
@@ -11,11 +12,12 @@ namespace HelloXamarinForms2
 		{
 			InitializeComponent();
 
-			NavigationService.NavigateAsync(nameof(MainPage));
+			NavigationService.NavigateAsync($"NavigationPage/{nameof(MainPage)}");
 		}
 
 		protected override void RegisterTypes()
 		{
+			Container.RegisterTypeForNavigation<NavigationPage>();
 			Container.RegisterTypeForNavigation<MainPage>();
 			Container.RegisterTypeForNavigation<TipCalculatorPage>();
 		}
