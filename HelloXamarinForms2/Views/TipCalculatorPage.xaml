@@ -15,17 +15,19 @@
 		<Entry
 			Placeholder="Enter billed amount"
 			Keyboard="Numeric"
-			Text="{Binding BillAmount, StringFormat='{0:C}'}" />
+			Text="{Binding BillAmount}" />
 		<StackLayout
 			Orientation="Horizontal">
 			<Slider
 				x:Name="TipPercentSlider"
 				Minimum="0"
-				Maximum="0.50"
+				Maximum="50"
 				Value="{Binding TipPercentage}"
 				HorizontalOptions="Start" />
 			<Label
-				Text="{Binding Source={x:Reference TipPercentSlider}, Path=Value, StringFormat='{0:P0}'}" />
+				Text="{Binding TipPercentage, StringFormat='{0}%'}" />
 		</StackLayout>
+		<Label
+			Text="{Binding TipAmount, StringFormat='Tip:  {0:C}'}" />
 	</StackLayout>
 </ContentPage>
